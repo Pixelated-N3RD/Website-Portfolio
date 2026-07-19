@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ishan | Creative Developer</title>
+
+    <meta name="description"
+        content="Interactive portfolio of Ishaan — I Design and Develop Websites, Three.js/WebGL, Healthcare Bioinformatics and IT, Biological Sciences & Biochemistry.">
+
+    <meta name="keywords"
+        content="Ishaan, Portfolio, JavaScript, Three.js, Developer, AI, Healthcare IT, Cybersecurity">
+
+    <meta name="author"
+        content="Ishaan">
+
+    <meta name="theme-color"
+        content="#0A0A0A">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+        content="ishan.dev">
+
+    <meta property="og:description"
+        content="Interactive Portfolio">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:image"
+        content="assets/images/preview.jpg">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ishaan Sorathiya",
+      "url": "https://ishan.dev",
+      "sameAs": [
+        "https://github.com/Pixelated-N3RD",
+        "https://www.linkedin.com/in/ishaansorathiya"
+      ],
+      "jobTitle": "Creative Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ishan.dev"
+      },
+      "knowsAbout": [
+        "JavaScript",
+        "Three.js",
+        "WebGL",
+        "Python",
+        "Bioinformatics",
+        "Healthcare IT",
+        "Cybersecurity"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Cumberland University",
+        "description": "M.S. Information Technology Management, Class of 2026"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://ishan.dev",
+      "name": "ishan.dev | Interactive Portfolio",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ishan.dev/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+    <div id="loader">
+
+        <div class="loader">
+            <div class="square" id="sq1"></div>
+            <div class="square" id="sq2"></div>
+            <div class="square" id="sq3"></div>
+            <div class="square" id="sq4"></div>
+            <div class="square" id="sq5"></div>
+            <div class="square" id="sq6"></div>
+            <div class="square" id="sq7"></div>
+            <div class="square" id="sq8"></div>
+            <div class="square" id="sq9"></div>
+        </div>
+
+        <span class="ldr-label">ISHAN.DEV</span>
+
+    </div>
+
+    <!-- Cursor -->
+
+    <div id="cursor"></div>
+
+    <div id="cursor-ring"></div>
+
+    <!-- Background -->
+
+    <canvas id="bg"></canvas>
+
+    <!-- Header -->
+
+    <header class="header">
+
+    <div class="nav-glow"></div>
+    <div class="nav-glow-border-dark"></div>
+    <div class="nav-glow-border-white"></div>
+    <div class="nav-glow-border"></div>
+    <div class="nav-spotlight"></div>
+
+<nav class="navbar">
+
+    <a href="#hero" class="logo">
+    ISHAN.DEV
+</a>
+    <ul class="nav-links">
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#research">Research</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#lab">Lab</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <button
+        id="theme-toggle"
+        aria-label="Toggle Theme">
+
+        🌙
+
+    </button>
+
+</nav>
+    </header>
+
+    <main>
+
+    <section id="hero" class="hero">
+
+    <div class="hero-gradient"></div>
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-left">
+
+            <span class="hero-badge">
+                AVAILABLE FOR INTERNSHIPS
+            </span>
+
+            <h1 class="hero-title">
+
+                Hi, I'm
+
+                <span class="gradient-text">
+                    Ishan
+                </span>
+
+            </h1>
+
+            <h2 class="hero-roles">
+
+                <span id="role-text">
+                    Creative Developer
+                </span>
+
+                <span class="cursor">|</span>
+
+            </h2>
+
+            <p class="hero-description">
+
+                 My skill set is continuously evolving. an active JavaScript and Python developer.I do it for the game.
+                I'm always open to networking, collaboration, and learning!
+
+                I love building interactive experiences, games, and I have a background in biological sciences and bioinformatics research.
+
+            </p>
+<div class="hero-buttons">
+
+    <a href="#projects" class="btn btn-primary">
+
+        Explore My Work
+
+        <span>→</span>
+
+    </a>
+
+    <a href="#contact" class="btn btn-secondary">
+
+        Let's Connect
+
+    </a>
+</div>
+ <div class="hero-socials">
+
+    <a href="https://github.com/Pixelated-N3RD" target="_blank">
+
+        GitHub <svg class="icon-link2" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link2-left" d="M9 17H7A5 5 0 0 1 7 7h2"/><path class="link2-right" d="M15 7h2a5 5 0 1 1 0 10h-2"/><line class="link2-middle" x1="8" y1="12" x2="16" y2="12"/></svg>
+
+    </a>
+
+   <a
+    href="https://www.linkedin.com/in/ishaansorathiya"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    LinkedIn <svg class="icon-link2" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link2-left" d="M9 17H7A5 5 0 0 1 7 7h2"/><path class="link2-right" d="M15 7h2a5 5 0 1 1 0 10h-2"/><line class="link2-middle" x1="8" y1="12" x2="16" y2="12"/></svg>
+
+</a>
+   <a
+    href="assets/Ishaan_Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    Resume <svg class="icon-link" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link-path link-path-1" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path class="link-path link-path-2" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+
+</a>
+</div>
+</div>
+        <div class="hero-right">
+
+            <div class="terminal">
+
+                <div class="terminal-header">
+
+                    <div class="terminal-dots">
+
+                        <span class="dot red"></span>
+
+                        <span class="dot yellow"></span>
+
+                        <span class="dot green"></span>
+
+                    </div>
+
+                    <span class="terminal-title">ishan@portfolio: ~</span>
+
+                </div>
+
+                <div class="terminal-body">
+
+                    <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">whoami</span></div>
+                    <div class="term-output">Ishaan Sorathiya</div>
+                    <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">cat Status.txt</span></div>
+                    <div class="term-output"> M.S. Information Technology Management Cumberland University — Class of 2026</div>
+                    <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">./now-building.sh</span></div>
+                    <div class="term-output">ishan.dev · Brain Arcade · blooming lilies</div>
+
+                    <div class="term-output term-tagline">I Learn, I Build, I Adapt...</div>
+
+                    <div class="term-line"><span class="term-prompt">$</span><span class="term-caret"></span></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+    </div>
+
+        </section>
+
+        <section id="about"></section>
+
+        <section id="projects" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-label">// 02 — Projects</span>
+
+                <h2 class="section-title">Things I've built</h2>
+
+                <p class="section-description">
+                    A mix of interactive experiences, games, and motion gestures
+                </p>
+
+                <div class="card-grid">
+
+                    <div class="card">
+                        <span class="card-tag wip">In Progress</span>
+                        <h3 class="card-title">Brain Arcade</h3>
+                        <p class="card-description">
+                            A browser-based retro arcade hub gathering original browser
+                            games under one dark neon aesthetic, complete with a looping
+                            Web Audio API chiptune soundtrack and mute toggle. Still being
+                            built out.
+                        </p>
+                        <div class="card-tech">
+                            <span>JavaScript</span>
+                            <span>Canvas</span>
+                            <span>Web Audio API</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag wip">In Progress</span>
+                        <h3 class="card-title">Blooming Lily</h3>
+                        <p class="card-description">
+                            A CSS-only generative flower animation — three uniquely
+                            colored, uniquely shaped blooms unfurling in real time, built
+                            as a study in pure CSS motion with no JS-driven rendering.
+                        </p>
+                        <div class="card-tech">
+                            <span>CSS3</span>
+                            <span>Animation</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD/Blooming-Lilly" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag">Experiment</span>
+                        <h3 class="card-title">Cosmos Particles</h3>
+                        <p class="card-description">
+                            A real-time WebGL particle system controlled by hand gestures
+                            and touch — pinch to zoom, make a fist to freeze rotation,
+                            tilt your hand to rotate the whole scene.
+                        </p>
+                        <div class="card-tech">
+                            <span>Three.js</span>
+                            <span>WebGL</span>
+                            <span>MediaPipe Hands</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD/COSMOS-PARTICLES" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                            <a href="https://pixelated-n3rd.github.io/COSMOS-PARTICLES/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag">Game</span>
+                        <h3 class="card-title">Monkey Touch</h3>
+                        <p class="card-description">
+                            A clean 3×3 sliding-puzzle brain game in vanilla JS — level
+                            progression, a timer and move counter, and solvable shuffle
+                            logic, with a mobile-friendly, no-dependency build.
+                        </p>
+                        <div class="card-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD/MONKEY-TOUCH" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag">Tool</span>
+                        <h3 class="card-title">Ghost Keys</h3>
+                        <p class="card-description">
+                            A fully client-side password generator with an entropy meter,
+                            adjustable length and character sets, and local history —
+                            built on the Web Crypto API with zero network calls.
+                        </p>
+                        <div class="card-tech">
+                            <span>JavaScript</span>
+                            <span>Web Crypto API</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD/GHOST-KEYS" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag">Creative</span>
+                        <h3 class="card-title">Birthday Wish</h3>
+                        <p class="card-description">
+                            An interactive birthday card — a two-character chat that
+                            unfolds one click at a time, with a typing effect, floating
+                            confetti, and a soft sound cue on every message.
+                        </p>
+                        <div class="card-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD/BIRTHDAY-WISH" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag">This Site</span>
+                        <h3 class="card-title">ishan.dev Portfolio</h3>
+                        <p class="card-description">
+                            This portfolio itself — a hand-built, animation-driven site
+                            using vanilla JS modules, a Web Audio-powered loader sequence,
+                            and a Three.js-ready canvas background layer.
+                        </p>
+                        <div class="card-tech">
+                            <span>HTML / CSS / JS</span>
+                            <span>Three.js</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="research" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-label">// 03 — Research</span>
+
+                <h2 class="section-title">Undergraduate thesis</h2>
+
+                <p class="section-description">
+                    Before moving into software, I spent my final undergraduate year
+                    in a wet-lab-adjacent bioinformatics Thesis — my first real experience
+                    of using computational Bioinformatics to address a real-world problem.
+                </p>
+
+                <div class="card research-card">
+
+                    <span class="card-tag lab">B.Sc. (Hons.) Thesis · 2023</span>
+
+                    <h3 class="card-title">
+                        Identification of Anti-Hepatocellular Carcinoma Candidate
+                        Drugs for Drug Repositioning Using Gene Signatures
+                    </h3>
+
+                    <p class="card-description">
+                        Submitted to the Department of Zoology, Faculty of Science,
+                        at The Maharaja Sayajirao University of Baroda, in partial
+                        fulfillment of a B.Sc. (Hons.) in Zoology. The project applied
+                        drug-repositioning methodology to hepatocellular carcinoma
+                        (HCC) — instead of developing a new drug from scratch, it
+                        worked from published HCC gene signatures and bioinformatics
+                        databases (GEO, KEGG, GO) to computationally flag existing,
+                        already-approved drugs as candidates for repurposing against
+                        HCC, aiming to cut the years-long cost and risk of conventional
+                        drug discovery.
+                    </p>
+
+                    <div class="card-tech">
+                        <span>Bioinformatics</span>
+                        <span>Gene Expression Analysis</span>
+                        <span>Drug Repositioning</span>
+                        <span>GEO / KEGG / GO</span>
+                    </div>
+
+                    <div class="card-links">
+                        <a href="assets/Thesis_Anti-HCC_Drug_Repositioning.pdf" target="_blank" rel="noopener noreferrer">Read Full Thesis (PDF)<svg class="icon-link" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link-path link-path-1" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path class="link-path link-path-2" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-label">// 04 — Skills</span>
+
+                <h2 class="section-title">What I work with</h2>
+
+                <p class="section-description">
+                    A blend of software skills from my dev work, and the research
+                    background I came from before switching into tech.
+                </p>
+
+                <div class="skills-grid">
+
+                    <div class="card skills-card">
+
+                        <h3 class="card-title">Technical</h3>
+
+                        <div class="skill-pills">
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Three.js / WebGL</span>
+                            <span class="skill-pill">HTML/CSS</span>
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">Data Analytics</span>
+                            <span class="skill-pill">UI/UX</span>
+                        </div>
+
+                    </div>
+
+                    <div class="card skills-card">
+
+                        <h3 class="card-title">Research</h3>
+
+                        <div class="skill-pills">
+                            <span class="skill-pill">Oncology</span>
+                            <span class="skill-pill">Gene Expression</span>
+                            <span class="skill-pill">Biochemistry</span>
+                            <span class="skill-pill">Animal Behavior</span>
+                            <span class="skill-pill">Bioinformatics</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="experience"></section>
+
+        <section id="lab" class="content-section">
+
+            <div class="section-inner">
+
+                <span class="section-label">// 05 — Lab</span>
+
+                <h2 class="section-title">Experiments &amp; other work</h2>
+
+                <p class="section-description">
+                    Smaller sketches and prototypes — generative art, shader studies,
+                    and other things built to learn something new rather than ship a product.
+                </p>
+
+                <div class="card-grid">
+
+                    <div class="card">
+                        <span class="card-tag lab">Experiment</span>
+                        <h3 class="card-title">A Bird in Flight</h3>
+                        <p class="card-description">
+                            An interactive mathematical art piece — a wing traced in real
+                            time by parametric equations, rendered on canvas and driven by
+                            a small multi-file JS architecture.
+                        </p>
+                        <div class="card-tech">
+                            <span>Canvas</span>
+                            <span>Parametric Math</span>
+                            <span>Generative Art</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-tag lab">Experiment</span>
+                        <h3 class="card-title">Quantum Tap</h3>
+                        <p class="card-description">
+                            A fast-reflex tap game built as a standalone module inside
+                            Brain Arcade — exploring tight input timing and short animation
+                            loops in vanilla JS.
+                        </p>
+                        <div class="card-tech">
+                            <span>JavaScript</span>
+                            <span>Canvas</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/Pixelated-N3RD" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="content-section">
+
+            <div class="section-inner contact-inner">
+
+                <span class="section-label">// 06 — Contact</span>
+
+                <h2 class="section-title">Let's build something</h2>
+
+                <p class="section-description">
+                    Open to internships and interesting collaborations —
+                    reach out and I'll get back to you.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="mailto:ishaansorathiya2@gmail.com" class="btn btn-primary">
+                        Email Me
+                        <span>→</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ishaansorathiya" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        LinkedIn<svg class="icon-link2" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link2-left" d="M9 17H7A5 5 0 0 1 7 7h2"/><path class="link2-right" d="M15 7h2a5 5 0 1 1 0 10h-2"/><line class="link2-middle" x1="8" y1="12" x2="16" y2="12"/></svg>
+                    </a>
+
+                    <a href="https://github.com/Pixelated-N3RD" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        GitHub<svg class="icon-link2" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="link2-left" d="M9 17H7A5 5 0 0 1 7 7h2"/><path class="link2-right" d="M15 7h2a5 5 0 1 1 0 10h-2"/><line class="link2-middle" x1="8" y1="12" x2="16" y2="12"/></svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        © 2026 Ishaan
+
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

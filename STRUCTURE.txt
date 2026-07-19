@@ -1,0 +1,41 @@
+ishan.dev/
+│
+├── index.html
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── fonts/
+│   └── videos/
+│
+├── css/
+│   ├── variables.css
+│   ├── reset.css
+│   ├── typography.css
+│   ├── layout.css
+│   ├── components.css
+│   ├── animations.css
+│   ├── themes.css
+│   └── responsive.css
+│
+├── js/
+│   └── main.js
+│
+├── modules/
+│   ├── cursor.js
+│   ├── navbar.js
+│   ├── particles.js
+│   ├── theme.js
+│   ├── typewriter.js
+│   ├── observer.js
+│   ├── transitions.js
+│   ├── terminal.js
+│   └── utilities.js
+│
+├── projects/
+│
+├── data/
+│
+├── robots.txt
+├── sitemap.xml
+└── manifest.json
