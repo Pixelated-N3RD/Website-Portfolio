@@ -1,0 +1,42 @@
+/* Light theme overrides — activated when Theme.js toggles body.light */
+body.light {
+    --bg: #ffffff;
+    --surface: #f4f4f6;
+    --primary: #7b2cbf;
+    --secondary: #9d4edd;
+    --text: #0e0e10;
+    --muted: #4a4a4a;
+    --border: rgba(0, 0, 0, .08);
+    --glass: rgba(0, 0, 0, .04);
+    --shadow: 0 15px 45px rgba(0, 0, 0, .12);
+}
+
+body.light,
+body.light * {
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+/* Navbar was invisible in light mode (rgba(255,255,255,.05) on a white
+   page), which also exposed the raw blurred glow layers behind it as an
+   ugly floating blob. Give the bar itself a real, visible glass surface --
+   same purple used by the primary buttons -- so it reads as a proper
+   glassmorphism bar again. */
+body.light .navbar{
+    background: rgba(123, 44, 191, .22) !important;
+    border: 1px solid rgba(123, 44, 191, .45) !important;
+    backdrop-filter: blur(20px);
+}
+
+/* The glow layers themselves are tuned for a dark page (heavy black
+   stops in the conic gradients) -- dial them way down in light mode so
+   they read as a faint colored shimmer instead of a dark smudge. */
+body.light .nav-glow,
+body.light .nav-glow-border-dark,
+body.light .nav-glow-border-white,
+body.light .nav-glow-border{
+    opacity: .12;
+}
+
+body.light .header:hover .nav-glow{
+    opacity: .22;
+}

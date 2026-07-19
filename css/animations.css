@@ -1,0 +1,425 @@
+/* ===========================
+   PAGE LOADER
+=========================== */
+
+#loader {
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:28px;
+
+    z-index:99999;
+
+    transition:opacity .8s ease,
+               visibility .8s ease;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.square {
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  animation: loader_5191 675ms ease-in-out infinite alternate;
+  will-change: opacity;
+}
+
+#sq1 {
+  margin-top: -25px;
+  margin-left: -25px;
+  animation-delay: 0s;
+}
+
+#sq2 {
+  margin-top: -25px;
+  animation-delay: 75ms;
+}
+
+#sq3 {
+  margin-top: -25px;
+  margin-left: 15px;
+  animation-delay: 150ms;
+}
+
+#sq4 {
+  margin-left: -25px;
+  animation-delay: 225ms;
+}
+
+#sq5 {
+  animation-delay: 300ms;
+}
+
+#sq6 {
+  margin-left: 15px;
+  animation-delay: 375ms;
+}
+
+#sq7 {
+  margin-top: 15px;
+  margin-left: -25px;
+  animation-delay: 450ms;
+}
+
+#sq8 {
+  margin-top: 15px;
+  animation-delay: 525ms;
+}
+
+#sq9 {
+  margin-top: 15px;
+  margin-left: 15px;
+  animation-delay: 600ms;
+}
+
+@keyframes loader_5191 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ldr-label {
+
+    font-family:Consolas,monospace;
+
+    font-size:.85rem;
+
+    letter-spacing:6px;
+
+    color:#6b6b70;
+
+    margin-top:40px;
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.4;
+
+        transform:scale(.96);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+        transform:scale(.96);
+
+    }
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero-left>*{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+.hero-title{
+
+    animation:fadeUp .8s ease forwards;
+    animation-delay:.3s;
+
+}
+
+.hero-roles{
+
+    animation:fadeUp .8s ease forwards;
+    animation-delay:.5s;
+
+}
+
+.hero-description{
+
+    animation:fadeUp .8s ease forwards;
+    animation-delay:.7s;
+
+}
+
+.hero-buttons{
+
+    animation:fadeUp .8s ease forwards;
+    animation-delay:.9s;
+
+}
+
+.hero-socials{
+
+    animation:fadeUp .8s ease forwards;
+    animation-delay:1.1s;
+
+}
+
+.terminal{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+    animation:slideLeft 1s ease forwards;
+
+    animation-delay:.8s;
+
+}
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   CUSTOM CURSOR
+=========================== */
+
+#cursor,#cursor-ring{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:99998;
+
+    transition:opacity .3s ease;
+
+}
+
+#cursor{
+
+    width:6px;
+
+    height:6px;
+
+    background:var(--text);
+
+    z-index:99999;
+
+    transition:opacity .3s ease, background-color .3s ease;
+
+}
+
+#cursor-ring{
+
+    width:26px;
+
+    height:26px;
+
+    border:1.5px solid var(--text);
+
+    transition:width .25s ease, height .25s ease, opacity .3s ease, border-color .3s ease;
+
+}
+
+#cursor-ring.cursor-hover{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+/* Forced white on permanently-dark surfaces (e.g. the terminal card),
+   so the cursor doesn't vanish there in light mode */
+#cursor.cursor-invert{
+
+    background:#ffffff;
+
+}
+
+#cursor-ring.cursor-invert{
+
+    border-color:#ffffff;
+
+}
+
+@media (hover: hover) and (pointer: fine){
+
+    body.has-custom-cursor{
+
+        cursor:none;
+
+    }
+
+    body.has-custom-cursor #cursor,
+    body.has-custom-cursor #cursor-ring{
+
+        display:block;
+
+    }
+
+    body.has-custom-cursor a,
+    body.has-custom-cursor button{
+
+        cursor:none;
+
+    }
+
+}
+
+/* ===========================
+   LINK / LINK2 HOVER ICONS
+   Real motion spec pulled from animate-ui's <Link animateOnHover /> and
+   <Link2 animateOnHover /> (Motion/Framer components), rebuilt in plain
+   CSS since this is a vanilla site -- same glyphs, same transform-origins.
+   .icon-link  -> next to PDF links (Resume, Thesis)
+   .icon-link2 -> next to social/networking links (GitHub, LinkedIn)
+=========================== */
+
+.icon-link,
+.icon-link2{
+
+    display:inline-block;
+
+    vertical-align:-2px;
+
+    margin-left:6px;
+
+    color:currentColor;
+
+    overflow:visible;
+
+}
+
+/* Link: the two hook shapes pull apart diagonally, like a chain link
+   coming loose -- mirrors the real "default" Motion variant (x/y Â±1.5px) */
+.link-path{
+
+    transition:transform .4s ease-in-out;
+
+    transform-origin:12px 12px;
+
+}
+
+a:hover .link-path-1{
+
+    transform:translate(-1.5px, 1.5px);
+
+}
+
+a:hover .link-path-2{
+
+    transform:translate(1.5px, -1.5px);
+
+}
+
+/* Link2: a little "clink" at the joint -- both arcs and the middle bar
+   rotate slightly around their real anchor points, then settle back */
+.link2-left,
+.link2-right,
+.link2-middle{
+
+    transition:transform .4s ease-in-out;
+
+}
+
+.link2-left{
+
+    transform-origin:9px 12px;
+
+}
+
+.link2-right{
+
+    transform-origin:15px 12px;
+
+}
+
+.link2-middle{
+
+    transform-origin:12px 12px;
+
+}
+
+a:hover .link2-left{
+
+    transform:rotate(10deg);
+
+}
+
+a:hover .link2-right{
+
+    transform:rotate(-6deg);
+
+}
+
+a:hover .link2-middle{
+
+    transform:rotate(12deg);
+
+}

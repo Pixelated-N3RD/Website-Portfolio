@@ -1,0 +1,33 @@
+:root {
+
+    --bg:#050505;
+
+    --surface:#0e0e10;
+
+    --primary:#9d4edd;
+
+    --secondary:#7b2cbf;
+
+    --text:#ffffff;
+
+    --muted:#a0a0a0;
+
+    --border:rgba(255,255,255,.08);
+
+    --glass:rgba(255,255,255,.04);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --shadow:0 15px 45px rgba(0,0,0,.45);
+
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}

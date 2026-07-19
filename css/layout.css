@@ -1,0 +1,170 @@
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 8%;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:1450px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.hero-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-title{
+
+    font-size:5rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.hero-description{
+
+    max-width:650px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:1.15rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:15px;
+
+}
+
+.hero-socials{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-top:30px;
+
+}
+/* ======================
+CONTENT SECTIONS (Projects / Lab / etc.)
+====================== */
+
+.content-section{
+
+    min-height:100vh;
+
+    padding:140px 8% 100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.section-inner{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+}
+
+.section-label{
+
+    display:block;
+
+    font-family:Consolas,monospace;
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    color:var(--primary);
+
+    margin-bottom:14px;
+
+}
+
+.section-title{
+
+    font-size:2.75rem;
+
+    font-weight:800;
+
+    margin-bottom:16px;
+
+}
+
+.section-description{
+
+    max-width:650px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+    margin-bottom:60px;
+
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #b5179e, #7209b7, #4361ee);
+
+    background-clip: text;          /* Standard property */
+    -webkit-background-clip: text;  /* Chrome, Edge, Safari */
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
