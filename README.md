@@ -1,4 +1,4 @@
-# ishan.dev
+# ISHAN.DEV
 
 Source code for my personal developer portfolio, [ishan.dev](https://ishan.dev). Built with vanilla HTML, CSS, and JavaScript in a modular structure — no frameworks, no build step required.
 
