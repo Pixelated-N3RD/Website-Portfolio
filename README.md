@@ -42,8 +42,7 @@ ishan.dev.loader/
 ```
 
 ## Live Demo
-
-[ishan.dev](https://ishan.dev)
+https://pixelated-n3rd.github.io/Website-Portfolio/
 
 ## License
 
