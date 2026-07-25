@@ -239,7 +239,62 @@
 /* ===========================
    CUSTOM CURSOR
 =========================== */
+#cursor,#cursor-ring{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:99998;
+    transition:opacity .3s ease;
+}
 
+#cursor{
+    width:6px;
+    height:6px;
+    background:var(--text);
+    z-index:99999;
+    transition:opacity .3s ease, background-color .3s ease;
+}
+
+#cursor-ring{
+    width:26px;
+    height:26px;
+    border:1.5px solid var(--text);
+    transition:width .25s ease, height .25s ease, opacity .3s ease, border-color .3s ease;
+}
+
+#cursor-ring.cursor-hover{
+    width:42px;
+    height:42px;
+}
+
+/* Forced white on permanently-dark surfaces (e.g. the terminal card),
+   so the cursor doesn't vanish there in light mode */
+#cursor.cursor-invert{
+    background:#ffffff;
+}
+
+#cursor-ring.cursor-invert{
+    border-color:#ffffff;
+}
+
+@media (hover: hover) and (pointer: fine){
+    body.has-custom-cursor{
+        cursor:none;
+    }
+
+    body.has-custom-cursor #cursor,
+    body.has-custom-cursor #cursor-ring{
+        display:block;
+    }
+
+    body.has-custom-cursor a,
+    body.has-custom-cursor button{
+        cursor:none;
+    }
+}
 #cursor,#cursor-ring{
 
     display:none;
