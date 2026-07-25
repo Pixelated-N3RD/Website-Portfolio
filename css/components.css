@@ -32,7 +32,23 @@
 
 .btn-primary{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
     background:var(--primary);
+
+}
+
+.btn-primary img {
+
+    width:18px;
+
+    height:18px;
+
+    flex-shrink:0;
 
 }
 
@@ -40,11 +56,43 @@
 
     transform:translateY(-4px);
 
+    box-shadow:0 0 30px -5px var(--primary);
+
 }
 
 .btn-secondary{
 
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
     border:1px solid var(--border);
+
+}
+
+.btn-secondary img {
+
+    width:18px;
+
+    height:18px;
+
+    flex-shrink:0;
+
+    transition:filter var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--primary);
+
+    background:rgba(157, 78, 221, .12);
+
+    box-shadow:0 0 25px -5px var(--primary);
 
 }
 
@@ -801,4 +849,40 @@ mouse-tracking spotlight (.nav-spotlight, driven by js/modules/navGlow.js)
 
 .header:hover .nav-spotlight {
     opacity: 1;
+}
+
+/* ======================
+HERO SOCIALS
+====================== */
+
+.hero-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.hero-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.hero-social-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-social-link img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: filter var(--transition);
 }
