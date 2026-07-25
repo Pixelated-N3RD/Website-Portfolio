@@ -40,3 +40,13 @@ body.light .nav-glow-border{
 body.light .header:hover .nav-glow{
     opacity: .22;
 }
+
+/* Social icon SVGs are white — flip them dark in light mode,
+   then revert to white on hover (purple background) */
+body.light .hero-social-link img,
+body.light .btn-secondary img {
+    filter: brightness(0);
+}
+body.light .hero-social-link:hover img {
+    filter: none;
+}
